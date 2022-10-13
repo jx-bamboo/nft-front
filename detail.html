@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>NFT-bootstrap</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+			crossorigin="anonymous">
+		<style type="text/css">
+			.cred {
+				border: 0.1px solid red;
+			}
+
+			header {
+				box-shadow: 0px 4px 16px 0px rgba(212, 212, 212, 0.26);
+			}
+
+			.bg-main {
+				background: rgb(107, 232, 186);
+			}
+
+			.bg-main2 {
+				background: rgb(41, 103, 236);
+			}
+		</style>
+	</head>
+	<body>
+		<header class="p-3 mb-3">
+			<div class="container">
+				<!-- <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> -->
+				<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+					<a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+						<img src="./img/logo-roll.png" class="img-fluid .img-thumbnail" width="80em" />
+					</a>
+
+					<!-- <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"> -->
+					<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+						<!-- <li><a href="#" class="nav-link px-2 link-secondary">NFT市场</a></li>
+		          <li><a href="#" class="nav-link px-2 link-dark">艺术家</a></li>
+		          <li><a href="#" class="nav-link px-2 link-dark">展览馆</a></li>
+		          <li><a href="#" class="nav-link px-2 link-dark">实物市场</a></li>
+		          <li><a href="#" class="nav-link px-2 link-dark">元宇宙</a></li> -->
+						<!-- <li><a href="#" class="nav-link px-2 link-secondary">NFT市场</a></li>
+				  <li><a href="#" class="nav-link px-2 link-dark">设置信息</a></li>
+				  <li><a href="#" class="nav-link px-2 link-dark">实名认证</a></li>
+				  <li><a href="#" class="nav-link px-2 link-dark">邀请奖励</a></li> -->
+						<!-- <li><a href="#" class="nav-link px-2 link-dark">市场动态</a></li> -->
+						<!-- <li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				      Dropdown
+				    </a>
+				    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+				      <li><a class="dropdown-item" href="#">Action</a></li>
+				      <li><a class="dropdown-item" href="#">Another action</a></li>
+				      <li><hr class="dropdown-divider"></li>
+				      <li><a class="dropdown-item" href="#">Something else here</a></li>
+				    </ul>
+				  </li> -->
+					</ul>
+					<style type="text/css">
+						#head-logo::after {
+							display: none;
+							content: none;
+						}
+					</style>
+					<div class="dropdown text-end">
+						<a id="head-logo" href="#" class="d-block link-dark text-decoration-none dropdown-toggle"
+							id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+							<!-- <img src="./img/logo.jpeg" alt="mdo" width="32" height="32" class="rounded-circle"> -->
+							<b>support@feiniao.com</b>
+						</a>
+						<ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+							<li><a class="dropdown-item" href="#">设置信息</a></li>
+							<li><a class="dropdown-item" href="#">实名认证</a></li>
+							<li><a class="dropdown-item" href="#">邀请奖励</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">离开系统</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<style type="text/css">
+			.baniframe {
+				width: 100%;
+				height: 100%;
+				border-width: 0px;
+			}
+
+			.add-copy:hover {
+				cursor: pointer;
+			}
+			
+			.nftimg{
+				/* box-shadow: 0px 0px 15px 1px; */
+				/* transform-style: preserve-3d;
+				-webkit-transform-style: preserve-3d;
+				perspective:150px;
+				-webkit-perspective:150px; */
+				/* transform: rotate(45deg);
+				-webkit-transform: rotate(45deg); 
+				transform-origin:20% 40%;
+				-webkit-transform-origin:20% 40%; */;
+				
+				animation:myfirst 10s;
+				animation-iteration-count:infinite;
+				/* animation-timing-function: linear; */
+				-webkit-animation:myfirst 10s;
+				-webkit-animation-iteration-count: infinite;
+				/* -webkit-animation-timing-function: linear; */
+			}
+			@keyframes myfirst{
+				0%{transform:rotateY(0deg);}
+				25%{transform:rotateY(30deg);}
+				50%{transform:rotateY(0deg);}
+				75%{transform:rotateY(-30deg);}
+				100%{transform:rotateY(0deg);}
+			}
+			
+			@-webkit-keyframes myfirsts
+			{
+				0%{transform:rotateY(0deg);}
+				25%{transform:rotateY(30deg);}
+				50%{transform:rotateY(0deg);}
+				75%{transform:rotateY(-30deg);}
+				100%{transform:rotateY(0deg);}
+			}
+			
+			.nftimgdiv{
+				perspective: 500px;
+				transform-origin: bottom center;
+				transform-style: preserve-3d;
+				-webkit-transform-style: preserve-3d;
+			}
+		</style>
+		
+		<div class=" p-3">
+			<div class="container">
+				<div class="row d-flex align-content-start flex-wrap">
+					<div class="col col-6 text-center nftimgdiv" style="position: relative;">
+						<!-- <img src="./img/3d-2.png" class="nftimg" width="270" height="270" style="position: absolute;">
+						<img src="./img/3d-3.png" class="nftimg" width="260" height="260" style="position: absolute;right: 65px;top: 5px;border:solid #fff 3px;border-radius: 15px;">
+						<img src="./img/nft.png" class="nftimg" width="250" height="250" style="position: absolute;border-radius: 5px;right: 70px;top: 10px;"> -->
+						
+						<img src="./img/nft.png" class="img-thumbnail rounded border-5 nftimg" width="250" height="250">
+						
+						<img src="./img/nftbottom.png" class="img-fluid">
+					</div>
+					<div class="col col-6">
+						<p class="fs-4 fw-bold">美丽女王天上人间采草枯荣</p>
+						<div class="content d-flex justify-content-around pt-3">
+							<div class="">
+								<p>价格</p>
+								<p>¥199</p>
+							</div>
+							<div class="">
+								<p>限量</p>
+								<p>999</p>
+							</div>
+							<div class="">
+								<p>分发</p>
+								<p>19</p>
+							</div>
+						</div>
+						<div class="mt-2 mb-2 p-3 border rounded d-flex justify-content-between clearfix">
+							<div class="clearfix">
+								<p>链上标识</p>
+								<span class="text-break" id="liveToastBtn" data-bs-toggle="tooltip"
+									data-bs-placement="top"
+									title="点击复制">0xf7a21ffb762ef2c14d8713b18f5596b4b0b0490a</span>
+								<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+									<div id="liveToast" class="toast" role="alert" aria-live="assertive"
+										aria-atomic="true">
+										<div class="toast-body fw-bold">
+											复制成功
+										</div>
+									</div>
+								</div>
+								<script type="text/javascript">
+									var toastTrigger = document.getElementById('liveToastBtn')
+									var toastLiveExample = document.getElementById('liveToast')
+									if (toastTrigger) {
+										toastTrigger.addEventListener('click', function() {
+											var toast = new bootstrap.Toast(toastLiveExample)
+											toast.show()
+										})
+									}
+								</script>
+							</div>
+							<div class="">
+								<p>上架时间</p>
+								<p>2021.11.11</p>
+							</div>
+						</div>
+						<div class="d-grid gap-2">
+						  <button class="btn btn-primary btn-lg" type="button"><img src="img/alipay.png" width="40" >支付宝购买</button>
+						  <!-- <button class="btn btn-success" type="button">微信</button> -->
+						</div>
+					</div>
+				</div>
+
+				<!-- <div class="row text-center">
+					<div class="col-12">
+						<img src="img/logo.jpeg" width="90" height="90" class="rounded-circle">
+					</div>
+					<div class="col-12">
+						<h4 class="pt-2">渡边</h4>
+					</div>
+					<div class="col-12 p-1">
+						渡口路，边上，等你
+					</div>
+					<div class="col-12 text-break align-middle">
+						0x425c9607a171181B855a4a103931D90ED1B271F3 <img src="./img/copy24.png" class="add-copy">
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<!--  -->
+
+		<style type="text/css">
+			.content {
+				background: #fafafa;
+			}
+
+			.content a {
+				text-decoration: none;
+			}
+		</style>
+		<div class="content">
+			<div class="container pb-5">
+				<!-- <h4 class="pt-5">创作</h4> -->
+
+				<nav class="pt-3">
+					<ol class="breadcrumb">
+						<li class=""><a href="#" class=" text-dark">
+								<img src="img/logo02.jpeg" > &nbsp;江西小飞鸟科技有限公司出品
+							</a></li>
+					</ol>
+				</nav>
+				<!-- <div class="d-flex">
+		  			<div class="author d-flex align-items-center justify-content-center flex-column">
+		  				<a href=""><img src="./img/logo02.jpeg" alt="" /></a>
+		  				<div id="">
+		  					住那
+		  				</div>
+		  			</div>
+		  		</div> -->
+				<div class="row row-cols-1 row-cols-md-4 g-3 pt-3">
+
+					内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍
+
+				</div>
+			</div>
+		</div>
+
+
+		<style type="text/css">
+			.author-list {
+				overflow: auto;
+			}
+
+			.author {
+				width: 107px;
+				height: 107px;
+				border-radius: 16px;
+			}
+
+			.author:hover {
+				background: #F5F5F5;
+			}
+		</style>
+
+		<style type="text/css">
+			footer a {
+				color: #515154;
+				text-decoration: none;
+				font-size: 0.875em;
+			}
+
+			footer a:hover {
+				color: #1d1d1f;
+				text-decoration: underline;
+			}
+		</style>
+
+		<!-- <footer></footer> -->
+		<footer class="bd-footer py-5">
+			<div class="container py-5">
+				<div class="row">
+				</div>
+			</div>
+		</footer>
+
+		<!-- JavaScript 文件是可选的。从以下两种建议中选择一个即可！ -->
+
+		<!-- 选项 1：包含 Popper 的 Bootstrap 集成包 -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+		</script>
+
+		<!-- 选项 2：Popper 和 Bootstrap 的 JS 插件各自独立 -->
+		<!--
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+		-->
+		
+		<!-- ==================== -->
+		
+
+
+	</body>
+</html>

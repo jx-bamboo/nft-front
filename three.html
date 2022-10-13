@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+		<script src="js/three.js"></script>
+		<script>
+			var mesh;
+			
+			// 新建一个AnimationMixer, 并取得AnimationClip实例列表
+			var mixer = new THREE.AnimationMixer( mesh );
+			var clips = mesh.animations;
+			
+			// 在每一帧中更新mixer
+			function update () {
+				mixer.update( deltaSeconds );
+			}
+			
+			// 播放一个特定的动画
+			var clip = THREE.AnimationClip.findByName( clips, 'dance' );
+			var action = mixer.clipAction( clip );
+			action.play();
+			
+			// 播放所有动画
+			clips.forEach( function ( clip ) {
+				mixer.clipAction( clip ).play();
+			} );
+		</script>
+	</body>
+</html>
